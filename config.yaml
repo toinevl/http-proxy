@@ -1,0 +1,17 @@
+# Proxy Configuration
+
+proxy:
+  # Proxy settings
+  host: "127.0.0.1"
+  port: 8080
+
+  # Authentication settings
+  authentication:
+    type: "basic"
+    username: "user"
+    password: "pass"
+
+# Logging settings
+logging:
+  level: "info"
+  file: "proxy.log"
