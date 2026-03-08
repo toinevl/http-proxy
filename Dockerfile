@@ -1,0 +1,1 @@
+FROM python:3.9-alpine\n\n# Set working directory\nWORKDIR /app\n\n# Copy requirements.txt and install dependencies\nCOPY requirements.txt .\nRUN pip install --no-cache-dir -r requirements.txt\n\n# Copy the current directory contents into the container at /app\nCOPY . .\n\n# Expose the proxy server port\nEXPOSE 8080\n\n# Run the application\nCMD ["python", "proxy_server.py"]
